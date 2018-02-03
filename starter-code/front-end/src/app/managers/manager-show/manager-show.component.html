@@ -3,4 +3,14 @@
 	<h3>{{oneManager.email}}</h3>
 	<h3>{{oneManager.office_number}}</h3>
 	<h3>{{oneManager.cell_phone_number}}</h3>
+	<div *ngIf="oneManager.artists">
+		<h3>Artists:</h3>
+		<ul>
+			<ul *ngFor = "let artist of oneManager.artists">{{artist.name}}
+				<li *ngFor = "let song of artist.songs">
+					{{song.name}}
+				</li>
+			</ul>
+		</ul>
+	</div>
 </div>

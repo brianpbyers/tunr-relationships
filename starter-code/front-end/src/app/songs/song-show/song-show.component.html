@@ -1,6 +1,9 @@
 <div *ngIf="oneSong">
 	<h2>{{oneSong.title}}</h2>
-	<h3>{{oneSong.duration}}</h3>
-	<h3>{{oneSong.date_of_release}}</h3>
-	<h3>{{oneSong.album_title}}</h3>
+	<div *ngIf="oneSong.artist">
+		<h3>by: {{oneSong.artist.name}}</h3>
+	</div>
+	<h3>Time: {{oneSong.duration}}</h3>
+	<h3>Release Date: {{oneSong.date_of_release}}</h3>
+	<h3>Album: {{oneSong.album_title}}</h3>
 </div>
